@@ -9,13 +9,10 @@ public class FragileParcel extends Parcel implements Trackable{
         this.timeToLive = timeToLive;
     }
 
-    public int getTimeToLive() {
-        return timeToLive;
-    }
 
     @Override
     public void packageItem(){
-        System.out.println("Посылка <<" + getDescription() + ">> обёрнута в защитную плёнку");
+        System.out.println("Посылка <<" + description + ">> обёрнута в защитную плёнку");
         super.packageItem();
     }
 

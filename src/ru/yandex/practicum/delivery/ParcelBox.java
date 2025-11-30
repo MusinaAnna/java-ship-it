@@ -15,12 +15,12 @@ public class ParcelBox<T extends Parcel> {
     }
 
     public void addParcel(T parcel) {
-        if (currentWeight + parcel.getWeight() <= maxWeight) {
+        if (currentWeight + parcel.weight <= maxWeight) {
             parcels.add(parcel);
-            currentWeight += parcel.getWeight();
-            System.out.println("Посылка '" + parcel.getDescription() + "' добавлена в коробку.");
+            currentWeight += parcel.weight;
+            System.out.println("Посылка '" + parcel.description + "' добавлена в коробку.");
         } else {
-            System.out.println("Предупреждение: Нельзя добавить посылку '" + parcel.getDescription() +
+            System.out.println("Предупреждение: Нельзя добавить посылку '" + parcel.description +
                     "'. Превышен максимальный вес коробки.");
         }
     }
